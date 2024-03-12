@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b38e21bcfc.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="png/logo-white.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+          <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>web developer</p>
+        <h1>Hi, I'm <span>Manil</span><br> from Andhra Pradesh</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="img/IMG_20221213_004244.jpg" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Seeking a position in a reputed organization like yours
+            to utilize my productive skills, Knowledge and abilities and to add value to the 
+            organization in the process of achieving professional growth</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Programming Languages</span><br>C , Python, Java, Machine Learning</li>
+              <li><span>Web Development</span><br>HTML , CSS, JavaScript, Bootstrap</li>
+              <li><span>Database</span><br>PostgreSql</li>
+              <li><span>Version Control</span><br>Git & Github</li>
+              
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>YBI Founndation</span><br>successfully finished two-month internship in machine learning training, where they acquired 
+                practical knowledge of a variety of machine learning methods and algorithms.
+                </li>
+              <li><span>Edu Skills</span><br>Took part in an AWS-hosted virtual internship program with an emphasis on machine learning 
+                and artificial intelligence (ML & AI). gained eight weeks of hands-on experience implementing 
+                AI and ML solutions
+                </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>BTech (data science)</span><br>studying with an <b>8.02 CGPA</b> from 2024 at Qis College of Engineering and Technology,
+                Ongole
+               </li>
+              <li><span>Diploma (Mech)</span><br>obtained a diploma with a grade of <b>79.79% </b>in 2020 from DA Government Polytechnic
+                College in Ongole
+               </li>
+              <li><span>SSC</span><br> completed the SSC at Navodaya Techno School in 2017 with an <b>8.2 CGPA</b></li>
+             
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--projects-->
+  <div id="projects">
+    <div class="container">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="projects-list">
+        <div>
+          <h2>Plant Leaf Disease Detection</h2><br>
+          <p>By using Convolutional Neural Networks (CNN) for plant leaf image classification to diagnose diseases. Developed web applications enabling users to upload leaf images for automated disease identification. Committed to enhancing agricultural practices through early disease detection and effective management</p>
+        </div>
+
+        <div>
+          <h2>FUNFOODFATAKA</h2><br>
+          <p> online ordering food in college canteen.The process consists of a 
+            customer choosing the canteen of their choice, scanning the menu items, choosing an 
+            item, and finally choosing for pick-up or delivery</p>
+        </div>
+
+        <div>
+          <h2>marketing mix model</h2><br>
+          <p> The aim of this project to statistical analysis such as multivariate regressions on sales and marketing time series data to estimate the impact of various marketing tactics on sales 
+            and then forecast the impact of future sets of tactics.</p>
+        </div>
+        <div>
+          <h2>College website</h2><br>
+          <p>The aim of this project to design a website for college includes     information about college and faculty and infrastructure
+
+          </p>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--contact-->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> contacat@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 987456321</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <a href="img/Manil_Sannebooina.pdf" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form>
+          <input  type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message"  rows="6" placeholder="Your message"></textarea>
+          <button type="submit" class="btn">submit</button>
+                </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      
+    }
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right = "0" ;
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px" ;
+    }
+  </script>
+</body>
+</html>
